@@ -1,0 +1,59 @@
+.scene {
+    transform-style: preserve-3d;
+    perspective: 10000px;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    position: relative;
+    transform: translateZ(9990px) translateX(-50px) translateY(-50px);
+    animation: tourne 5s linear 0s infinite;
+    transition: 1s;
+
+}
+
+@keyframes tourne {
+    0% {
+        transform: rotateY(0deg) translateZ(9990px) translateX(-50px) translateY(-50px);
+    }
+
+    100% {
+        transform: rotateY(360deg) translateZ(9990px) translateX(-50px) translateY(-50px);
+    }
+}
+
+.face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.front {
+    background: #000;
+    transform: translateZ(40px);
+}
+
+.haut {
+    background: red;
+    transform: translateZ(0px) translateY(-40px) rotateX(90deg);
+}
+
+.bas {
+    background: yellow;
+    transform: translateZ(0px) translateY(40px) rotateX(90deg);
+}
+
+.gauche {
+    background: green;
+    transform: translateZ(0px) translateX(40px) rotateY(90deg);
+}
+
+.droite {
+    background: blue;
+    transform: translateZ(0px) translateX(-40px) rotateY(90deg);
+}
+
+.dos {
+    background: orange;
+    transform: translateZ(-40px);
+}
